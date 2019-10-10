@@ -70,7 +70,7 @@ public class AuthServerOAuth2Config extends AuthorizationServerConfigurerAdapter
     ) throws Exception {
         clients.inMemory()
                 .withClient("acme")
-                .authorizedGrantTypes("password", "refresh_token")
+                .authorizedGrantTypes("client_credentials", "refresh_token")
                 .secret("{noop}acmesecret")
                 .scopes("all");
     }
